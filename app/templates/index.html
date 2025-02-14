@@ -21,9 +21,9 @@
         <button id="dark-mode-toggle" title="Toggle dark mode">
             <span class="material-icons">dark_mode</span>
         </button>
-      <a href="{{ url_for('index') }}">Home</a>
-      <a href="{{ url_for('faq') }}">FAQs</a>
-      <a href="{{ url_for('contact') }}">Contact</a>
+      <a href="{{ url_for('main.index') }}">Home</a>
+      <a href="{{ url_for('main.faq') }}">FAQs</a>
+      <a href="{{ url_for('main.contact') }}">Contact</a>
     </div>
   </nav>
 
@@ -32,8 +32,8 @@
       <h1>Collective Power<br>Meets Premium Value</h1>
       <p>Harness the strength of community to unlock exclusive discounts on luxury goods. Bigger groups mean better deals for everyone.</p>
       <div class="hero-buttons">
-        <a href="{{ url_for('signup') }}" class="cta-button">Sign up</a>
-        <a href="{{ url_for('login') }}" class="login-button">Log In</a>
+        <a href="{{ url_for('main.signup') }}" class="cta-button">Sign up</a>
+        <a href="{{ url_for('main.login') }}" class="login-button">Log In</a>
       </div>
     </div>
     <div class="group-visual">
@@ -98,10 +98,10 @@
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="{{ url_for('index') }}">How It Works</a></li>
-          <li><a href="{{ url_for('faq') }}">Benefits</a></li>
-          <li><a href="{{ url_for('contact') }}">For Sellers</a></li>
-          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          <li><a href="{{ url_for('main.index') }}">How It Works</a></li>
+          <li><a href="{{ url_for('main.faq') }}">Benefits</a></li>
+          <li><a href="{{ url_for('main.contact') }}">For Sellers</a></li>
+          <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
         </ul>
       </div>
       <div class="footer-column">

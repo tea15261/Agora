@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>{% block title %}AGORA{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='app/static/assets/favicon.ico') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
         integrity="sha512-papU31J59lI3q5bOpf0QPlD+Qe3snvNOr5KlDE24s5WJHZ7vKSQzpWIUyVfHgKj+RPRULrLO0+cqT1pAhl6rkg==" 
         crossorigin="anonymous" 
@@ -21,9 +21,9 @@
         <button id="dark-mode-toggle" title="Toggle dark mode">
             <span class="material-icons">dark_mode</span>
         </button>
-      <a href="{{ url_for('index') }}">Home</a>
-      <a href="{{ url_for('faq') }}">FAQs</a>
-      <a href="{{ url_for('contact') }}">Contact</a>
+      <a href="{{ url_for('main.index') }}">Home</a>
+      <a href="{{ url_for('main.faq') }}">FAQs</a>
+      <a href="{{ url_for('main.contact') }}">Contact</a>
     </div>
   </nav>
 
@@ -40,9 +40,9 @@
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="{{ url_for('index') }}">How It Works</a></li>
-          <li><a href="{{ url_for('faq') }}">Benefits</a></li>
-          <li><a href="{{ url_for('contact') }}">For Sellers</a></li>
+          <li><a href="{{ url_for('main.index') }}">How It Works</a></li>
+          <li><a href="{{ url_for('main.faq') }}">Benefits</a></li>
+          <li><a href="{{ url_for('main.contact') }}">For Sellers</a></li>
         </ul>
       </div>
       <div class="footer-column">
