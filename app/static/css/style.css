@@ -26,6 +26,10 @@
     -ms-overflow-style: none; 
   }
 
+button, .cta-button, .login-button, .signup-button {
+  text-decoration: none;
+}
+
   nav {
     position: fixed;
     width: 100%;
