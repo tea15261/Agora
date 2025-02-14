@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Sign Up - AGORA{% endblock %}
+{% block content %}
+<section class="signup-section">
+  <h2>Sign Up</h2>
+  <div class="signup-buttons">
+    <a href="{{ url_for('verify') }}" class="signup-button">Are you a Seller?</a>
+    <a href="{{ url_for('signup_consumer') }}" class="signup-button">Are you a Consumer?</a>
+  </div>
+</section>
+{% endblock %}

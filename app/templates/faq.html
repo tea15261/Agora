@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQs - AGORA</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+</head>
+<body>
+  {% extends "base.html" %}
+  {% block content %}
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is AGORA?</h3>
+      <p>AGORA is a platform that allows users to form buying groups to access exclusive discounts on luxury goods.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I join a buying group?</h3>
+      <p>You can join a buying group by signing up on our platform and selecting a group that fits your needs.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are there any fees to join?</h3>
+      <p>No, joining a buying group on AGORA is completely free!</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I contact support?</h3>
+      <p>You can reach our support team through the contact page or by emailing support@agora.com.</p>
+    </div>
+  </section>
+  {% endblock %}
+</body>
+</html>

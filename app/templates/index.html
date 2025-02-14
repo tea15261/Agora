@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AGORA</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-papU31J59lI3q5bOpf0QPlD+Qe3snvNOr5KlDE24s5WJHZ7vKSQzpWIUyVfHgKj+RPRULrLO0+cqT1pAhl6rkg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+  />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='assets/Screenshot_2025-02-08_at_2.40.14_PM-removebg-preview.png') }}" alt="AGORA Logo">
+    </div>
+    <div class="nav-links">
+        <button id="dark-mode-toggle" title="Toggle dark mode">
+            <span class="material-icons">dark_mode</span>
+        </button>
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('faq') }}">FAQs</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Collective Power<br>Meets Premium Value</h1>
+      <p>Harness the strength of community to unlock exclusive discounts on luxury goods. Bigger groups mean better deals for everyone.</p>
+      <div class="hero-buttons">
+        <a href="{{ url_for('signup') }}" class="cta-button">Sign up</a>
+        <a href="{{ url_for('login') }}" class="login-button">Log In</a>
+      </div>
+    </div>
+    <div class="group-visual">
+      <div class="circle-node" style="top: 25%; left: 30%;"></div>
+      <div class="circle-node" style="top: 45%; left: 50%;"></div>
+      <div class="circle-node" style="top: 65%; left: 40%;"></div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <h2>The Agora Advantage</h2>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Form Your Alliance</h3>
+        <p>Create or join buying groups with flexible membership rules</p>
+      </div>
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Amplify Your Reach</h3>
+        <p>Watch your collective bargaining power grow exponentially</p>
+      </div>
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Secure Premium Deals</h3>
+        <p>Access exclusive pricing through volume-based negotiations</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <div class="benefits-column">
+      <h3>Buyer Benefits</h3>
+      <div class="benefit-item">
+        <h4>Collective Leverage</h4>
+        <p>Multiply your individual purchasing power through group dynamics</p>
+      </div>
+      <div class="benefit-item">
+        <h4>Transparent Process</h4>
+        <p>Real-time tracking of group size and projected savings</p>
+      </div>
+    </div>
+    <div class="benefits-column">
+      <h3>Seller Benefits</h3>
+      <div class="benefit-item">
+        <h4>Instant Market Access</h4>
+        <p>Connect directly with verified, motivated buyers</p>
+      </div>
+      <div class="benefit-item">
+        <h4>Predictable Sales</h4>
+        <p>Move inventory faster with guaranteed group purchases</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About AGORA</h3>
+        <p>AGORA is your gateway to premium value through collective buying power. Join our community to unlock exclusive discounts and premium deals.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="{{ url_for('index') }}">How It Works</a></li>
+          <li><a href="{{ url_for('faq') }}">Benefits</a></li>
+          <li><a href="{{ url_for('contact') }}">For Sellers</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AGORA. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
