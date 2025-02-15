@@ -5,6 +5,27 @@
     <title>Contact Us - AGORA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+    <style>
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-group label {
+            font-size: 1rem;
+            color: var(--dark);
+        }
+
+        #other-reason {
+            margin-top: 0.5rem;
+            padding: 0.75rem;
+            border: 1px solid var(--dark);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
     {% extends "base.html" %}
@@ -18,6 +39,15 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             
+            <label for="reason">Reason for Contacting:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="reason" value="Support"> Support</label>
+                <label><input type="checkbox" name="reason" value="Feedback"> Feedback</label>
+                <label><input type="checkbox" name="reason" value="Inquiry"> Inquiry</label>
+                <label><input type="checkbox" name="reason" value="Other" id="other-checkbox"> Other</label>
+                <input type="text" id="other-reason" name="other_reason" placeholder="Please specify" style="display: none;">
+            </div>
+            
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
             
@@ -25,5 +55,15 @@
         </form>
     </section>
     {% endblock %}
+    <script>
+        document.getElementById('other-checkbox').addEventListener('change', function() {
+            var otherReason = document.getElementById('other-reason');
+            if (this.checked) {
+                otherReason.style.display = 'block';
+            } else {
+                otherReason.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
