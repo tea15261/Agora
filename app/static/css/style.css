@@ -312,6 +312,7 @@ button, .cta-button, .login-button, .signup-button {
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       text-decoration: none;
+      line-height: 1.5;
     }
 
   .hero-buttons {
