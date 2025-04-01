@@ -2,8 +2,8 @@
 {% block title %}Dashboard - AGORA{% endblock %}
 {% block content %}
 <div class="container">
-    <h1>Welcome, {{username}}</h1>
+    <h1>Welcome, {{ session["username"] }}</h1>
     <p>Welcome to Dashboard</p>
-    <a href="" class="btn btn-logout"></a>
+    <a href="{{ url_for('main.logout') }}" class="btn btn-logout">Logout</a>
 </div>
 {% endblock %}
