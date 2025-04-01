@@ -507,3 +507,62 @@ button, .cta-button, .login-button {
 .signup-section button:hover {
   background: #0F4A9E;
 }
+
+/* Flash messages */
+
+.flash-messages {
+  position: fixed;
+  top: 80px; /* Adjust to position under navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: auto;
+  max-width: 90%;
+  text-align: center;
+}
+
+.flash-messages .alert {
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.alert-success {
+  background-color: #4CAF50; /* Green */
+}
+
+.alert-danger {
+  background-color: #f44336; /* Red */
+}
+
+.alert-warning {
+  background-color: #ff9800; /* Orange */
+}
+
+.alert-info {
+  background-color: #2196F3; /* Blue */
+}
+
+/* Animation to fade out */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.flash-messages .alert.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+/* Dashboard */
+
+.dash {
+  height: 100vh;
+  background-color: var(--primary);
+}
+
