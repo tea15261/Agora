@@ -467,34 +467,6 @@ button, .cta-button, .login-button {
   background: #0F4A9E;
 }
 
-/* Verify Section */
-.verify-section {
-  padding: 5rem 5%;
-  background: var(--accent);
-  text-align: center;
-}
-.verify-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-.verify-section p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-.verify-section .cta-button {
-  background: var(--primary);
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.verify-section .cta-button:hover {
-  background: #0F4A9E;
-}
-
 /* Signup Consumer Section */
 .signup-section {
   padding: 5rem 5%;
