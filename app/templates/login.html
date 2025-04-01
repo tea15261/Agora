@@ -2,6 +2,15 @@
 {% block title %}Login - AGORA{% endblock %}
 {% block content %}
 <section class="login-section">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
   <h2>Login</h2>
   <form action="#" method="POST">
     <label for="email">Email:</label>
@@ -15,4 +24,16 @@
     <p>Don't have an account? <a href="{{ url_for('main.signup') }}">Sign up</a></p>
   </form>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        let alerts = document.querySelectorAll(".flash-messages .alert");
+        alerts.forEach(alert => {
+            alert.classList.add("fade-out");
+            setTimeout(() => alert.remove(), 500); // Remove after fade-out
+        });
+    }, 3000); // 3-second delay
+});
+</script>
 {% endblock %}

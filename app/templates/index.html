@@ -35,6 +35,17 @@
         <a href="{{ url_for('main.signup') }}" class="cta-button">Sign up</a>
         <a href="{{ url_for('main.login') }}" class="login-button">Log In</a>
       </div>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
     </div>
     <div class="group-visual">
       <div class="circle-node" style="top: 25%; left: 30%;"></div>
@@ -124,6 +135,17 @@
     toggleButton.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+          let alerts = document.querySelectorAll(".flash-messages .alert");
+          alerts.forEach(alert => {
+              alert.classList.add("fade-out");
+              setTimeout(() => alert.remove(), 500); // Remove after fade-out
+          });
+      }, 3000); // 3-second delay
+  });
+  
   </script>
 </body>
 </html>
