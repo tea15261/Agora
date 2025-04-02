@@ -20,12 +20,14 @@
       <img src="{{ url_for('static', filename='assets/Screenshot_2025-02-08_at_2.40.14_PM-removebg-preview.png') }}" alt="AGORA Logo">
     </div>
     <div class="nav-links">
-        <button id="dark-mode-toggle" title="Toggle dark mode">
-            <span class="material-icons">dark_mode</span>
-        </button>
-      <a href="{{ url_for('main.index') }}">Home</a>
-      <a href="{{ url_for('main.faq') }}">FAQs</a>
-      <a href="{{ url_for('main.contact') }}">Contact</a>
+      {% if session['username'] %} 
+        <a href="#">Dashboard</a>
+        <a href="#">Logout</a>
+      {% else %}
+        <a href="{{ url_for('main.index') }}">Home</a>
+        <a href="{{ url_for('main.faq') }}">FAQs</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+      {% endif %}
     </div>
   </nav>
   <main style="padding-top: 100px;">
@@ -60,12 +62,5 @@
       <p>© 2025 AGORA. All Rights Reserved.</p>
     </div>
   </footer>
-
-  <script>
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
 </body>
 </html>
